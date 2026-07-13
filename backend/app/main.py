@@ -29,11 +29,11 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "https://YOUR-VERCEL-PROJECT.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-    
 )
 
 @app.get("/")
@@ -44,20 +44,3 @@ def root():
 
 from sqlalchemy import text
 from backend.app.database.connection import engine
-
-@app.get("/debug-db")
-def debug_db():
-    with engine.connect() as conn:
-        db = conn.execute(text("SELECT current_database()")).scalar()
-        schema = conn.execute(text("SELECT current_schema()")).scalar()
-        tables = conn.execute(text("""
-            SELECT table_name
-            FROM information_schema.tables
-            WHERE table_schema='public'
-        """)).fetchall()
-
-    return {
-        "database": db,
-        "schema": schema,
-        "tables": [t[0] for t in tables]
-    }
