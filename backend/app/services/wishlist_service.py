@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from backend.app.models.game import Game
-from backend.app.models.wishlist import Wishlist
+from app.models.game import Game
+from app.models.wishlist import Wishlist
 
 
 def add_to_wishlist(

@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from backend.app.core.dependencies import get_current_user
-from backend.app.database.session import get_db
-from backend.app.models.user import User
-from backend.app.models.wishlist import Wishlist
+from app.core.dependencies import get_current_user
+from app.database.session import get_db
+from app.models.user import User
+from app.models.wishlist import Wishlist
 
-from backend.app.schemas.recommendation import RecommendationResponse
+from app.schemas.recommendation import RecommendationResponse
 from ml.recommendation.content import (
     recommend_games,
     recommend_from_wishlist,

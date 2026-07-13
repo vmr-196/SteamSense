@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, ForeignKey, TIMESTAMP
 from sqlalchemy.sql import func
 
-from backend.app.models.game import Base
+from app.models.game import Base
 
 
 class Wishlist(Base):

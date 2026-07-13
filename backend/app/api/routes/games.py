@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.app.database.session import get_db
-from backend.app.models.game import Game
-from backend.app.schemas.game import GameResponse
-from backend.app.core.dependencies import get_current_user_optional
-from backend.app.models.user import User
-from backend.app.services.recently_viewed_service import add_recently_viewed
+from app.database.session import get_db
+from app.models.game import Game
+from app.schemas.game import GameResponse
+from app.core.dependencies import get_current_user_optional
+from app.models.user import User
+from app.services.recently_viewed_service import add_recently_viewed
 router = APIRouter(tags=["Games"])
 
 

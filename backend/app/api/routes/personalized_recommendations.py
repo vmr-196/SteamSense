@@ -1,15 +1,15 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.app.database.session import get_db
-from backend.app.core.dependencies import get_current_user
-from backend.app.models.user import User
+from app.database.session import get_db
+from app.core.dependencies import get_current_user
+from app.models.user import User
 
-from backend.app.schemas.personalized_recommendation import (
+from app.schemas.personalized_recommendation import (
     PersonalizedRecommendationResponse,
 )
 
-from backend.app.services.personalized_recommendation_service import (
+from app.services.personalized_recommendation_service import (
     get_personalized_recommendations,
 )
 

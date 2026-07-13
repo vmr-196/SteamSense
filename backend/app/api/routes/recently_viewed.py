@@ -1,11 +1,11 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.app.core.dependencies import get_current_user
-from backend.app.database.session import get_db
-from backend.app.models.user import User
-from backend.app.schemas.recently_viewed import RecentlyViewedResponse
-from backend.app.services.recently_viewed_service import (
+from app.core.dependencies import get_current_user
+from app.database.session import get_db
+from app.models.user import User
+from app.schemas.recently_viewed import RecentlyViewedResponse
+from app.services.recently_viewed_service import (
     add_recently_viewed,
     get_recently_viewed,
 )

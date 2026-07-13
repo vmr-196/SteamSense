@@ -1,18 +1,18 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
-from backend.app.database.session import get_db
-from backend.app.models.user import User
-from backend.app.schemas.user import UserCreate, UserResponse
-from backend.app.core.security import hash_password
-from backend.app.schemas.user import UserLogin, Token
-from backend.app.core.security import verify_password
-from backend.app.core.jwt import create_access_token
-from backend.app.core.dependencies import get_current_user
-from backend.app.models.user import User
+from app.database.session import get_db
+from app.models.user import User
+from app.schemas.user import UserCreate, UserResponse
+from app.core.security import hash_password
+from app.schemas.user import UserLogin, Token
+from app.core.security import verify_password
+from app.core.jwt import create_access_token
+from app.core.dependencies import get_current_user
+from app.models.user import User
 from fastapi.security import OAuth2PasswordRequestForm
-from backend.app.schemas.user import UserUpdate, PasswordUpdate
-from backend.app.services.user_service import (
+from app.schemas.user import UserUpdate, PasswordUpdate
+from app.services.user_service import (
     get_profile,
     update_profile,
     change_password,

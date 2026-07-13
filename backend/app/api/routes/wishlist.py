@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.app.database.session import get_db
-from backend.app.core.dependencies import get_current_user
-from backend.app.models.user import User
-from backend.app.schemas.wishlist import WishlistResponse
-from backend.app.services.wishlist_service import add_to_wishlist
-from backend.app.services.wishlist_service import (
+from app.database.session import get_db
+from app.core.dependencies import get_current_user
+from app.models.user import User
+from app.schemas.wishlist import WishlistResponse
+from app.services.wishlist_service import add_to_wishlist
+from app.services.wishlist_service import (
     add_to_wishlist,
     get_user_wishlist,
     remove_from_wishlist,
