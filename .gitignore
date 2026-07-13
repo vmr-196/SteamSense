@@ -1,0 +1,38 @@
+# Virtual Environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+
+# ML Models
+*.pkl
+*.joblib
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build
+dist/
+build/
+frontend/dist/
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# ML Datasets
+ml/data/
