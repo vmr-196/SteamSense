@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Text, TIMESTAMP
 from sqlalchemy.sql import func
 
-from app.models.game import Base
+from backend.app.models.game import Base
 
 
 class User(Base):

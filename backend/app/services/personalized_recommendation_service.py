@@ -2,8 +2,8 @@ from collections import defaultdict
 
 from sqlalchemy.orm import Session
 
-from app.models.wishlist import Wishlist
-from app.models.recently_viewed import RecentlyViewed
+from backend.app.models.wishlist import Wishlist
+from backend.app.models.recently_viewed import RecentlyViewed
 from ml.recommendation.content import recommend_games
 
 

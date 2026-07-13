@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 
-from app.models.game import Game
-from app.models.recently_viewed import RecentlyViewed
+from backend.app.models.game import Game
+from backend.app.models.recently_viewed import RecentlyViewed
 from sqlalchemy import func
 
 def add_recently_viewed(

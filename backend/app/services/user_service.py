@@ -1,8 +1,8 @@
 from fastapi import HTTPException
 from sqlalchemy.orm import Session
 
-from app.models.user import User
-from app.core.security import hash_password, verify_password
+from backend.app.models.user import User
+from backend.app.core.security import hash_password, verify_password
 
 def get_profile(
     db: Session,
