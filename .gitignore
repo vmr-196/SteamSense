@@ -14,8 +14,15 @@ __pycache__/
 # Environment
 .env
 
-# ML Models
+# Ignore model files by default
 *.pkl
+
+# Keep SteamSense recommendation models
+!ml/recommendation/app_ids.pkl
+!ml/recommendation/games.pkl
+!ml/recommendation/tfidf_matrix.pkl
+!ml/recommendation/tfidf_vectorizer.pkl
+!ml/recommendation/titles.pkl
 *.joblib
 
 # Node

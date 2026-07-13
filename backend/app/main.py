@@ -41,3 +41,23 @@ def root():
     return {
         "message": "Welcome to SteamSense 🚀"
     }
+
+from sqlalchemy import text
+from backend.app.database.connection import engine
+
+@app.get("/debug-db")
+def debug_db():
+    with engine.connect() as conn:
+        db = conn.execute(text("SELECT current_database()")).scalar()
+        schema = conn.execute(text("SELECT current_schema()")).scalar()
+        tables = conn.execute(text("""
+            SELECT table_name
+            FROM information_schema.tables
+            WHERE table_schema='public'
+        """)).fetchall()
+
+    return {
+        "database": db,
+        "schema": schema,
+        "tables": [t[0] for t in tables]
+    }
